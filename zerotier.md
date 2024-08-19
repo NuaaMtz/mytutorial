@@ -1,18 +1,18 @@
-# 记录zerotier的配置planet以及各种细节的过程
+# 记录zerotier的配置planet以及各种细节的过程 
 
 ## 1.  安装/购买op路由器
 
 这不是我的擅长之处
 
+---
+
+
+
 ## 2. 创建自己的planet
 
-想要有好的体验和安全,一般都要自建plant,这步需要在有外网ip的服务器下运行.这种云服务器一般可以非常容易安装docker,那么只需要根据下面的github来就行:
-
-[docker安装planet](docker-zerotier-planet/README.md at master · xubiaolin/docker-zerotier-planet (github.com) "none")
+想要有好的体验和安全,一般都要自建plant,这步需要在有外网ip的服务器下运行.这种云服务器一般可以非常容易安装docker,那么只需要根据下面的github来就行:[docker安装]((docker-zerotier-planet/README.md at master · xubiaolin/docker-zerotier-planet (github.com))
 
 下面是连接里面的教程 :
-
----
 
 ### 2.1：准备条件
 
@@ -97,7 +97,13 @@ git clone https://ghproxy.imoyuapp.win/https://github.com/xubiaolin/docker-zerot
    6. 管理后台同意加入请求
    7. `zerotier-cli peers` 可以看到 ` planet` 角色
 3. 安卓
-   使用第三方安卓[Zerotier 非官方安卓客户端](https://github.com/kaaass/ZerotierFix)
+   使用第三方安卓[Zerotier 非官方安卓客户端
+   ](https://github.com/kaaass/ZerotierFix)
+
+
+---
+
+
 
 ## 3. 不同设备加入zerotier
 
@@ -110,6 +116,10 @@ git clone https://ghproxy.imoyuapp.win/https://github.com/xubiaolin/docker-zerot
 * ***gateway网关设置为:10.28.234.50(openwrt的zerotier的ip)***
 
 之后就可以在开启zerotier局域网的情况下直接使用有线网的ip访问了,而不需要安装新的zeriotier
+
+---
+
+
 
 ## 4. 配置文件的持久化
 
@@ -128,7 +138,7 @@ vim /etc/config/zerotier
 ```
 
 ```
-config zerotier zt_glan
+onfig zerotier zt_glan
         # 启用开关
         option enabled 1        # 永久存储配置路径
         option config_path '/etc/zerotier'        # 将永久存储配置文件夹链接还是复制到/var/lib。我建议设置成0
@@ -148,9 +158,7 @@ config zerotier zt_glan
 
 主要是要设置为1,复制模式,每次都从特定的目录上复制配置文件.
 
-
-
-
+---
 
 
 
@@ -159,3 +167,5 @@ config zerotier zt_glan
 已知道一个10.128.234.50可以上科学上网,要求10.128.234.212通过它来科学上网.只需要添加一个路由表:  **10.128.234.212/0 via 10.128.234.50.**
 
 然后在10.128.234.212上开启 Route via zerotier的选择就行.如果不需要科学上网了就把这个选择取消,然后重新连接就行
+
+---
