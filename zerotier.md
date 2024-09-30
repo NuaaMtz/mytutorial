@@ -1,12 +1,10 @@
-# 记录zerotier的配置planet以及各种细节的过程 
+# zx 记录zerotier的配置planet以及各种细节的过程
 
 ## 1.  安装/购买op路由器
 
 这不是我的擅长之处
 
 ---
-
-
 
 ## 2. 创建自己的planet
 
@@ -99,11 +97,10 @@ git clone https://ghproxy.imoyuapp.win/https://github.com/xubiaolin/docker-zerot
 3. 安卓
    使用第三方安卓[Zerotier 非官方安卓客户端
    ](https://github.com/kaaass/ZerotierFix)
-
+4. mac
+   进入官网下载dmg: [https://www.zerotier.com/download/](https://www.zerotier.com/download/) 同上替换文件路径:/Library/Application\ Support/ZeroTier/One/
 
 ---
-
-
 
 ## 3. 不同设备加入zerotier
 
@@ -118,8 +115,6 @@ git clone https://ghproxy.imoyuapp.win/https://github.com/xubiaolin/docker-zerot
 之后就可以在开启zerotier局域网的情况下直接使用有线网的ip访问了,而不需要安装新的zeriotier
 
 ---
-
-
 
 ## 4. 配置文件的持久化
 
@@ -159,8 +154,6 @@ onfig zerotier zt_glan
 主要是要设置为1,复制模式,每次都从特定的目录上复制配置文件.
 
 ---
-
-
 
 ## 5. 通过zerotier实现vpn
 
