@@ -3,3 +3,5 @@
 zerotier: 创建planet
 
 frp: 映射内网到外网
+
+tailiscale:配置
