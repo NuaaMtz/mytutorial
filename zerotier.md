@@ -97,7 +97,7 @@ git clone https://ghproxy.imoyuapp.win/https://github.com/xubiaolin/docker-zerot
 3. 安卓
    使用第三方安卓[Zerotier 非官方安卓客户端
    ](https://github.com/kaaass/ZerotierFix)
-4. mac
+4. mac  
    进入官网下载dmg: [https://www.zerotier.com/download/](https://www.zerotier.com/download/) 同上替换文件路径:/Library/Application\ Support/ZeroTier/One/
 
 ---
